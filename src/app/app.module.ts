@@ -8,8 +8,9 @@ import { NavigationComponent } from "./ui/navigation/navigation.component";
 import { CategoriesComponent } from "./features/categories/categories.component";
 import { CategoryCardComponent } from "./ui/category-card/category-card.component";
 import { FormsModule } from "@angular/forms";
-import { FlashCardsComponent } from './features/flash-cards/flash-cards.component';
-import { GamesComponent } from './features/games/games.component';
+import { FlashCardsComponent } from "./features/flash-cards/flash-cards.component";
+import { GamesComponent } from "./features/games/games.component";
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,13 @@ import { GamesComponent } from './features/games/games.component';
     FlashCardsComponent,
     GamesComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FontAwesomeModule,
+    FormsModule,
+    HttpClientModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
