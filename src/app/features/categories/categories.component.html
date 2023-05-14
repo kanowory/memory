@@ -2,7 +2,7 @@
   <div class="container">
     <app-category-card
       *ngFor="let category of categories"
-      [categoryName]="category.name"
+      [category]="category"
       (removeClicked)="removeCategory(category)"></app-category-card>
     <input
       (keydown.enter)="addCategory()"
