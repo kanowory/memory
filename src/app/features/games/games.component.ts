@@ -1,8 +1,20 @@
 import { Component } from "@angular/core";
+import {ActivatedRoute, Route, Router} from "@angular/router";
 
 @Component({
   selector: "app-games",
   templateUrl: "./games.component.html",
   styleUrls: ["./games.component.css"],
 })
-export class GamesComponent {}
+export class GamesComponent {
+  mode = "flashCard";
+
+
+  constructor(private route: Router,
+              private activatedRouter: ActivatedRoute) {
+  }
+
+  startGame(){
+    this.route.navigate([this.mode], {relativeTo: this.activatedRouter});
+  }
+}
